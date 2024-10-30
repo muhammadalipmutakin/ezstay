@@ -8,15 +8,19 @@
   "routes": [
     {
       "src": "/dist/(.*)",
-      "dest": "/dist/$1" // Untuk mengarahkan file CSS yang dihasilkan
+      "dest": "/dist/$1"  // Mengarahkan ke folder dist untuk CSS
     },
     {
       "src": "/assets/(.*)",
-      "dest": "/assets/$1" // Untuk mengarahkan file gambar
+      "dest": "/assets/$1"  // Mengarahkan ke folder assets untuk gambar
+    },
+    {
+      "src": "/src/(.*)",
+      "dest": "/src/$1"  // Mengarahkan ke folder src untuk JS
     },
     {
       "src": "/(.*)",
-      "dest": "/src/$1" // Untuk mengarahkan semua file di dalam src
+      "dest": "/src/index.html"  // Mengarahkan permintaan ke index.html di folder src
     }
   ]
 }
