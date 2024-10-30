@@ -7,8 +7,16 @@
   ],
   "routes": [
     {
+      "src": "/dist/(.*)",
+      "dest": "/dist/$1" // Untuk mengarahkan file CSS yang dihasilkan
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1" // Untuk mengarahkan file gambar
+    },
+    {
       "src": "/(.*)",
-      "dest": "src/$1"
+      "dest": "/src/$1" // Untuk mengarahkan semua file di dalam src
     }
   ]
 }
